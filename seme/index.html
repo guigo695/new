@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commune de Sèmè-Kpodji - Carrefour d'opportunités</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#003366', secondary: '#FFD700' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 51, 102, 0.5), rgba(0, 51, 102, 0.5)), url('https://readdy.ai/api/search-image?query=Beautiful%20aerial%20view%20of%20Seme-Kpodji%20city%20in%20Benin%2C%20Africa%2C%20with%20modern%20buildings%2C%20palm%20trees%2C%20and%20a%20peaceful%20coastal%20area.%20The%20image%20shows%20a%20vibrant%20African%20city%20with%20clear%20blue%20sky%2C%20some%20traditional%20architecture%20mixed%20with%20contemporary%20structures%2C%20and%20well-maintained%20streets%2C%20showing%20the%20entire%20cityscape%20with%20perfect%20clarity&width=1920&height=1080&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 51, 102, 0.1), 0 10px 10px -5px rgba(0, 51, 102, 0.04);
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(255, 215, 0, 0.2), 0 10px 10px -5px rgba(255, 215, 0, 0.1);
+        }
+
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            color: #FFD700;
+        }
+
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 51, 102, 0.1), 0 2px 4px -1px rgba(0, 51, 102, 0.06);
+        }
+
+        .btn-secondary {
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(255, 215, 0, 0.1), 0 2px 4px -1px rgba(255, 215, 0, 0.06);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-3">
+                    <span class="text-white font-bold text-xl">SK</span>
+                </div>
+                <div>
+                    <h1 class="text-primary font-bold text-xl">Sèmè-Kpodji</h1>
+                    <p class="text-xs text-gray-600">Commune du Bénin</p>
+                </div>
+            </a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#accueil" class="text-primary font-medium hover:text-secondary transition-colors">Accueil</a>
+                <a href="#apropos" class="text-gray-700 font-medium hover:text-primary transition-colors">À propos</a>
+                <a href="#actualites"
+                    class="text-gray-700 font-medium hover:text-primary transition-colors">Actualités</a>
+                <a href="#services" class="text-gray-700 font-medium hover:text-primary transition-colors">Services</a>
+                <a href="#contact" class="text-gray-700 font-medium hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-primary">
+                <i class="ri-menu-line ri-2x"></i>
+            </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#accueil" class="text-primary font-medium py-2 border-b border-gray-100">Accueil</a>
+                <a href="#apropos" class="text-gray-700 font-medium py-2 border-b border-gray-100">À propos</a>
+                <a href="#actualites" class="text-gray-700 font-medium py-2 border-b border-gray-100">Actualités</a>
+                <a href="#services" class="text-gray-700 font-medium py-2 border-b border-gray-100">Services</a>
+                <a href="#contact" class="text-gray-700 font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-section w-full min-h-screen pt-24 flex items-center">
+        <div class="container mx-auto px-4 py-16 text-white">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Sèmè-Kpodji</h1>
+                <h2 class="text-2xl md:text-3xl font-medium text-secondary mb-8">Carrefour d'opportunités</h2>
+                <p class="text-lg mb-10 max-w-2xl">Bienvenue dans notre commune dynamique, située au cœur du Bénin.
+                    Découvrez un territoire en plein essor, riche de sa diversité culturelle et de son potentiel
+                    économique.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="app.html"
+                        class="bg-transparent border-2 border-white text-white font-semibold px-8 py-3 !rounded-button whitespace-nowrap hover:bg-white hover:bg-opacity-10 transition-all">Accéder
+                        à la zone</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- À propos Section -->
+    <section id="apropos" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">À propos de notre commune</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Découvrez l'histoire, la géographie et les missions de la
+                    mairie de Sèmè-Kpodji.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <img src="https://readdy.ai/api/search-image?query=Beautiful%20landscape%20of%20Seme-Kpodji%20in%20Benin%2C%20showing%20a%20mix%20of%20modern%20and%20traditional%20architecture%2C%20with%20palm%20trees%2C%20well-maintained%20streets%2C%20and%20people%20going%20about%20their%20daily%20activities.%20The%20image%20captures%20the%20essence%20of%20this%20vibrant%20African%20commune%20with%20its%20unique%20cultural%20identity%20and%20development.&width=600&height=400&seq=2&orientation=landscape"
+                        alt="Vue de Sèmè-Kpodji" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Une commune en plein développement</h3>
+                    <p class="text-gray-700 mb-6">Située dans le département de l'Ouémé au Bénin, Sèmè-Kpodji est une
+                        commune dynamique qui s'étend sur une superficie de 250 km². Limitrophe de Cotonou, elle
+                        bénéficie d'une position stratégique qui en fait un pôle économique en pleine expansion.</p>
+                    <p class="text-gray-700 mb-8">Avec une population de plus de 220 000 habitants, notre commune est
+                        riche de sa diversité culturelle et de son patrimoine. La mairie œuvre quotidiennement pour
+                        améliorer le cadre de vie des citoyens et promouvoir le développement durable.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-2">224 553</div>
+                            <p class="text-gray-600">Habitants</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-2">250 km²</div>
+                            <p class="text-gray-600">Superficie</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-2">8</div>
+                            <p class="text-gray-600">Arrondissements</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Actualités Section -->
+    <section id="actualites" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Actualités municipales</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Restez informé des dernières nouvelles et événements de notre
+                    commune.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Actualité 1 -->
+                <div class="news-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+                    <img src="https://readdy.ai/api/search-image?query=African%20city%20council%20meeting%20with%20officials%20and%20citizens%20discussing%20community%20matters%2C%20in%20a%20modern%20meeting%20room%20with%20traditional%20African%20decorative%20elements.%20The%20image%20shows%20diverse%20participants%20engaged%20in%20productive%20dialogue%20about%20local%20governance%20and%20development%20initiatives.&width=400&height=250&seq=3&orientation=landscape"
+                        alt="Conseil municipal" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <div
+                                class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2">
+                                <i class="ri-calendar-line text-primary"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">16 juin 2025</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary mb-3">Conseil municipal extraordinaire</h3>
+                        <p class="text-gray-600 mb-4">Un conseil municipal extraordinaire se tiendra le 20 juin pour
+                            discuter des nouveaux projets d'infrastructure dans la commune.</p>
+                        <a href="#"
+                            class="inline-flex items-center text-primary font-medium hover:text-secondary transition-colors">
+                            Lire la suite
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Actualité 2 -->
+                <div class="news-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+                    <img src="https://readdy.ai/api/search-image?query=New%20modern%20school%20building%20in%20an%20African%20city%2C%20with%20students%20and%20teachers%20gathered%20outside.%20The%20building%20has%20contemporary%20architecture%20with%20some%20traditional%20African%20design%20elements%2C%20surrounded%20by%20trees%20and%20a%20well-maintained%20yard.%20The%20scene%20shows%20a%20vibrant%20educational%20environment%20in%20Benin.&width=400&height=250&seq=4&orientation=landscape"
+                        alt="Inauguration école" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <div
+                                class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2">
+                                <i class="ri-calendar-line text-primary"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">10 juin 2025</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary mb-3">Inauguration de la nouvelle école primaire
+                        </h3>
+                        <p class="text-gray-600 mb-4">La nouvelle école primaire de l'arrondissement de Tohouè a été
+                            inaugurée en présence des autorités locales et nationales.</p>
+                        <a href="#"
+                            class="inline-flex items-center text-primary font-medium hover:text-secondary transition-colors">
+                            Lire la suite
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Actualité 3 -->
+                <div class="news-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+                    <img src="https://readdy.ai/api/search-image?query=Cultural%20festival%20in%20Benin%20with%20colorful%20traditional%20costumes%2C%20dancers%20performing%2C%20and%20crowds%20of%20people%20celebrating.%20The%20scene%20shows%20vibrant%20African%20cultural%20heritage%20with%20traditional%20music%20instruments%2C%20decorations%2C%20and%20a%20festive%20atmosphere%20in%20an%20outdoor%20setting.&width=400&height=250&seq=5&orientation=landscape"
+                        alt="Festival culturel" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <div
+                                class="w-8 h-8 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-2">
+                                <i class="ri-calendar-line text-primary"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">5 juin 2025</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary mb-3">Festival culturel annuel</h3>
+                        <p class="text-gray-600 mb-4">Le festival culturel annuel de Sèmè-Kpodji se tiendra du 15 au 17
+                            juillet. Découvrez le programme des festivités.</p>
+                        <a href="#"
+                            class="inline-flex items-center text-primary font-medium hover:text-secondary transition-colors">
+                            Lire la suite
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#"
+                    class="inline-block bg-primary text-white font-semibold px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">Toutes
+                    les actualités</a>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Nos services municipaux</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Découvrez les différents services proposés par la mairie pour
+                    faciliter votre quotidien.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-6">
+                        <i class="ri-user-3-line ri-2x service-icon text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary text-center mb-3">État civil</h3>
+                    <p class="text-gray-600 text-center mb-6">Actes de naissance, mariage, décès et autres documents
+                        administratifs.</p>
+                    <div class="text-center">
+                        <a href="#"
+                            class="inline-block text-primary border border-primary font-medium px-6 py-2 !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-all">En
+                            savoir plus</a>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-6">
+                        <i class="ri-building-line ri-2x service-icon text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary text-center mb-3">Urbanisme</h3>
+                    <p class="text-gray-600 text-center mb-6">Permis de construire, certificats d'urbanisme et
+                        aménagement du territoire.</p>
+                    <div class="text-center">
+                        <a href="#"
+                            class="inline-block text-primary border border-primary font-medium px-6 py-2 !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-all">En
+                            savoir plus</a>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-6">
+                        <i class="ri-heart-pulse-line ri-2x service-icon text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary text-center mb-3">Santé</h3>
+                    <p class="text-gray-600 text-center mb-6">Centres de santé, campagnes de vaccination et programmes
+                        de sensibilisation.</p>
+                    <div class="text-center">
+                        <a href="#"
+                            class="inline-block text-primary border border-primary font-medium px-6 py-2 !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-all">En
+                            savoir plus</a>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-6">
+                        <i class="ri-book-open-line ri-2x service-icon text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary text-center mb-3">Éducation</h3>
+                    <p class="text-gray-600 text-center mb-6">Écoles, collèges, bibliothèques et programmes éducatifs
+                        communaux.</p>
+                    <div class="text-center">
+                        <a href="#"
+                            class="inline-block text-primary border border-primary font-medium px-6 py-2 !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-all">En
+                            savoir plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-6">
+                        <i class="ri-recycle-line ri-2x service-icon text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary text-center mb-3">Environnement</h3>
+                    <p class="text-gray-600 text-center mb-6">Gestion des déchets, espaces verts et initiatives
+                        écologiques.</p>
+                    <div class="text-center">
+                        <a href="#"
+                            class="inline-block text-primary border border-primary font-medium px-6 py-2 !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-all">En
+                            savoir plus</a>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-6">
+                        <i class="ri-government-line ri-2x service-icon text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary text-center mb-3">Affaires sociales</h3>
+                    <p class="text-gray-600 text-center mb-6">Aide sociale, soutien aux personnes vulnérables et
+                        solidarité.</p>
+                    <div class="text-center">
+                        <a href="#"
+                            class="inline-block text-primary border border-primary font-medium px-6 py-2 !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-all">En
+                            savoir plus</a>
+                    </div>
+                </div>
+                <!-- Service 7 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-6">
+                        <i class="ri-store-2-line ri-2x service-icon text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary text-center mb-3">Économie locale</h3>
+                    <p class="text-gray-600 text-center mb-6">Marchés, commerce local et développement économique.</p>
+                    <div class="text-center">
+                        <a href="#"
+                            class="inline-block text-primary border border-primary font-medium px-6 py-2 !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-all">En
+                            savoir plus</a>
+                    </div>
+                </div>
+                <!-- Service 8 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-6">
+                        <i class="ri-football-line ri-2x service-icon text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary text-center mb-3">Sports et loisirs</h3>
+                    <p class="text-gray-600 text-center mb-6">Infrastructures sportives, activités culturelles et
+                        événements.</p>
+                    <div class="text-center">
+                        <a href="#"
+                            class="inline-block text-primary border border-primary font-medium px-6 py-2 !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-all">En
+                            savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Contactez-nous</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Nous sommes à votre écoute. N'hésitez pas à nous contacter
+                    pour toute question ou demande.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h3 class="text-2xl font-semibold text-primary mb-6">Formulaire de contact</h3>
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                                <input type="text" id="name"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="Votre nom">
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="Votre email">
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Sujet</label>
+                                <input type="text" id="subject"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="Sujet de votre message">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="5"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                    placeholder="Votre message"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-primary text-white font-semibold px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">Envoyer
+                                le message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+                        <h3 class="text-2xl font-semibold text-primary mb-6">Informations de contact</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+                                    <i class="ri-map-pin-line ri-lg text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-800 mb-1">Adresse</h4>
+                                    <p class="text-gray-600">Mairie de Sèmè-Kpodji, BP 100, Sèmè-Kpodji, Bénin</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+                                    <i class="ri-phone-line ri-lg text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-800 mb-1">Téléphone</h4>
+                                    <p class="text-gray-600">+229 21 30 40 50</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+                                    <i class="ri-mail-line ri-lg text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-800 mb-1">Email</h4>
+                                    <p class="text-gray-600">contact@seme-kpodji.bj</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0">
+                                    <i class="ri-time-line ri-lg text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-800 mb-1">Horaires d'ouverture</h4>
+                                    <p class="text-gray-600">Lundi - Vendredi: 8h00 - 17h00</p>
+                                    <p class="text-gray-600">Samedi: 9h00 - 12h00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden h-64">
+                        <div class="relative w-full h-full"
+                            style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-3">
+                            <span class="text-primary font-bold text-xl">SK</span>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-xl">Sèmè-Kpodji</h3>
+                            <p class="text-xs text-gray-300">Commune du Bénin</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">Sèmè-Kpodji, carrefour d'opportunités et porte d'entrée vers un avenir
+                        prometteur pour tous ses habitants.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-all">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-all">
+                            <i class="ri-twitter-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-all">
+                            <i class="ri-instagram-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-all">
+                            <i class="ri-youtube-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-6">Liens rapides</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#accueil" class="text-gray-300 hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="#apropos" class="text-gray-300 hover:text-white transition-colors">À propos</a>
+                        </li>
+                        <li><a href="#actualites"
+                                class="text-gray-300 hover:text-white transition-colors">Actualités</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">État civil</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Urbanisme</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Santé</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Éducation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Environnement</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Affaires sociales</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-6">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Abonnez-vous à notre newsletter pour recevoir les dernières actualités
+                        de la commune.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email"
+                                class="flex-1 w-5 px-4 py-3 rounded-l border-none focus:outline-none text-gray-800"
+                                placeholder="Votre email">
+                            <button type="submit"
+                                class="bg-secondary text-primary font-semibold px-4 py-3 rounded-r whitespace-nowrap hover:bg-opacity-90 transition-all">S'abonner</button>
+                        </div>
+                    </form>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex items-center">
+                            <i class="ri-visa-fill text-white ri-2x"></i>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-mastercard-fill text-white ri-2x"></i>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-paypal-fill text-white ri-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-300 text-sm mb-4 md:mb-0">© 2025 Commune de Sèmè-Kpodji. Tous droits réservés.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-300 hover:text-white text-sm transition-colors">Politique de
+                            confidentialité</a>
+                        <a href="#" class="text-gray-300 hover:text-white text-sm transition-colors">Mentions
+                            légales</a>
+                        <a href="#" class="text-gray-300 hover:text-white text-sm transition-colors">Plan du site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-2x"></i>';
+                } else {
+                    mobileMenuButton.innerHTML = '<i class="ri-close-line ri-2x"></i>';
+                }
+            });
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-2x"></i>';
+                });
+            });
+        });
+    </script>
+    <script id="smooth-scroll-script">
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
